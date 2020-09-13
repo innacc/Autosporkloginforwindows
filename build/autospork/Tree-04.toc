@@ -1,0 +1,13 @@
+('c:\\users\\isaac\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\selenium-4.0.0a6.post2-py3.8.egg',
+ None,
+ {'EGG-INFO', '*.pyd', '*.pyc', '*.pyw', '*.cp38-win_amd64.pyd', '*.py'},
+ 'DATA',
+ [('selenium\\webdriver\\remote\\findElements.js',
+   'c:\\users\\isaac\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\selenium-4.0.0a6.post2-py3.8.egg\\selenium\\webdriver\\remote\\findElements.js',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\getAttribute.js',
+   'c:\\users\\isaac\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\selenium-4.0.0a6.post2-py3.8.egg\\selenium\\webdriver\\remote\\getAttribute.js',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\isDisplayed.js',
+   'c:\\users\\isaac\\appdata\\local\\programs\\python\\python38\\lib\\site-packages\\selenium-4.0.0a6.post2-py3.8.egg\\selenium\\webdriver\\remote\\isDisplayed.js',
+   'DATA')])
