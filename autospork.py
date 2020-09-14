@@ -145,6 +145,7 @@ if zeroandeight == ['No']:
                 join_button.click()
                 print("you have joined a class")
                 cj = cj + 1
+                check = 'N'
 
 if zeroandeight == ['Yes']:
     while cj <= 8:  
@@ -161,6 +162,7 @@ if zeroandeight == ['Yes']:
                 join_button.click()
                 print("you have joined a class")
                 cj = cj + 1
+                check = 'N'
 
 #quits the webbrowser
 driver.quit()
