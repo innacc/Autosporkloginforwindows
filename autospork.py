@@ -1,5 +1,4 @@
 
-
 import os
 import selenium
 import time
@@ -9,7 +8,6 @@ import calendar
 from selenium import webdriver
 from playsound import playsound
 from pathlib import Path
-from sys import exit
 
 
 ### INPUT YOUR CREDENTIALS HERE ###
@@ -23,7 +21,7 @@ if(os.stat(fpath).st_size == 0):
     print("                            |_|                    ")
     print("welcome to autosporklogin")
     time.sleep(3)
-    print("Make sure firefox is installed and you have done the setup")
+    print("Make sure firefox is installed")
     time.sleep(3)
     print("a donation to the paypal isaac.don7@gmail.com would be nice, but it is not necessary")
     time.sleep(3)
@@ -66,11 +64,9 @@ saturday = "Saturday"
 sunday = "Sunday"
 if(currentday == saturday):
     print("there is no school today")
-    time.sleep(3)
     exit()
 if(currentday == sunday):
     print("there is no school today")
-    time.sleep(3)
     exit()
 
 driver = webdriver.Firefox()
@@ -89,10 +85,9 @@ login_button.click()
 
 ## checks if login fails or not and goes to Schedule
 time.sleep(3)
-
+schedule_button = driver.find_element_by_xpath("/html/body/div[1]/div/div[1]/div/div/a[2]")
 
 try:
-    schedule_button = driver.find_element_by_xpath("/html/body/div[1]/div/div[1]/div/div/a[2]")
     schedule_button.click()
     print("Login Success")
 except:
@@ -132,8 +127,9 @@ if(currentday == friday):
 print("what is your next class (1 being your first class and 8 being your eighth class (if you have one))(This is not period)")
 cj = int(input())
 #Joins a class
+print(str(cj))
 #For 7 classes
-
+print(zeroandeight)
 if zeroandeight == ['No']:
     while cj <= 7:  
         try:
@@ -142,10 +138,13 @@ if zeroandeight == ['No']:
             time.sleep(1)
             pass
         else:
-            join_button.click()
-            print("you have joined a class")
-            playsound("joinclass.mp3")
-            cj = cj + 1
+            print("Type Y to join a class")
+            playsound("Thereclass.mp3")
+            check = input()
+            if check == 'Y':
+                join_button.click()
+                print("you have joined a class")
+                cj = cj + 1
 
 if zeroandeight == ['Yes']:
     while cj <= 8:  
@@ -155,10 +154,13 @@ if zeroandeight == ['Yes']:
             time.sleep(1)
             pass
         else:
-            join_button.click()
-            print("you have joined a class")
-            playsound("joinclass.mp3")
-            cj = cj + 1
+            print("Type Y to join a class")
+            playsound("Thereclass.mp3")
+            check = input()
+            if check == 'Y':
+                join_button.click()
+                print("you have joined a class")
+                cj = cj + 1
 
 #quits the webbrowser
 driver.quit()
